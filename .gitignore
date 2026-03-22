@@ -1,0 +1,30 @@
+# Bỏ qua môi trường ảo (Virtual Environment)
+venv/
+env/
+.env
+
+# Bỏ qua toàn bộ thư mục dữ liệu (QUAN TRỌNG: Không đẩy file CSV/Parquet GBs lên mạng)
+data/
+*.csv
+*.parquet
+*.json
+
+# Bỏ qua các file rác của Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Bỏ qua các file rác của Spark & Hadoop
+spark-warehouse/
+derby.log
+metastore_db/
+*.crc
+_SUCCESS
+.*.crc
+
+# Bỏ qua các file cấu hình của hệ điều hành và IDE (VS Code, PyCharm)
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
