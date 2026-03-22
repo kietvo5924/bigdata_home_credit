@@ -52,3 +52,18 @@ python -m venv venv
 
 # 3. Cài đặt các thư viện cần thiết
 pip install pyspark==3.5.0 pyarrow pandas
+
+## Cấu trúc thư mục dự án
+bigdata_home_credit/
+│
+├── data/
+│   ├── bronze/          <- Chứa 7 file CSV thô (Bạn tự thêm vào)
+│   ├── silver/          <- Dữ liệu đã làm sạch dạng Parquet
+│   └── gold/            <- Bảng Master Parquet hoàn chỉnh
+│
+├── src/
+│   ├── 01_ingestion.py  <- Luồng xử lý thô sang chuẩn
+│   └── 02_transform.py  <- Luồng tổng hợp và Join dữ liệu
+│
+├── .gitignore           <- Loại trừ file rác, venv và thư mục data/ khỏi Git
+└── README.md            <- Tài liệu hướng dẫn này
